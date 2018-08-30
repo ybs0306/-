@@ -1,0 +1,8 @@
+for k=1:10
+	kk = num2str(k);
+	name = strcat(kk,'.jpg');
+	img = imread(name);
+	img = imresize(img,[32,32]);
+	img = rgb2gray(img);
+	imwrite(img, name);
+end
